@@ -1,4 +1,4 @@
-update=2020-01-06 오후 7:35:03
+update=2020-01-14 오전 3:25:45
 version=1
 last_client=pcbnew
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=MainController2.net
+LastNetListRead=MainController.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -239,6 +239,17 @@ Enabled=0
 Name=Default
 Clearance=0.5
 TrackWidth=1
+ViaDiameter=2.5
+ViaDrill=1
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/1]
+Name=GND
+Clearance=0.5
+TrackWidth=2
 ViaDiameter=2.5
 ViaDrill=1
 uViaDiameter=0.3

@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 5)
+    (drawings 6)
     (tracks 25)
     (zones 0)
     (modules 9)
@@ -59,7 +59,7 @@
     (pad_drill 0.762)
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
-    (aux_axis_origin 0 0)
+    (aux_axis_origin 147.32 100.584)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
       (layerselection 0x010fc_ffffffff)
@@ -393,6 +393,18 @@
     )
   )
 
+  (dimension 17.526 (width 0.15) (layer F.Fab)
+    (gr_text "17.526 mm" (at 142.210001 91.821 270) (layer F.Fab)
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (feature1 (pts (xy 147.32 100.584) (xy 142.92358 100.584)))
+    (feature2 (pts (xy 147.32 83.058) (xy 142.92358 83.058)))
+    (crossbar (pts (xy 143.510001 83.058) (xy 143.510001 100.584)))
+    (arrow1a (pts (xy 143.510001 100.584) (xy 142.92358 99.457496)))
+    (arrow1b (pts (xy 143.510001 100.584) (xy 144.096422 99.457496)))
+    (arrow2a (pts (xy 143.510001 83.058) (xy 142.92358 84.184504)))
+    (arrow2b (pts (xy 143.510001 83.058) (xy 144.096422 84.184504)))
+  )
   (dimension 24.13 (width 0.15) (layer F.Fab)
     (gr_text "24.130 mm" (at 159.385 105.44) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))

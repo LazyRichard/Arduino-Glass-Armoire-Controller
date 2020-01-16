@@ -137,7 +137,7 @@ U 1 1 5E1790B5
 P 8100 3000
 F 0 "J2" H 8180 3042 50  0000 L CNN
 F 1 "Sensor_CH1" H 8180 2951 50  0000 L CNN
-F 2 "TerminalBlock_Dinkle2:ECH381V-3p" H 8100 3000 50  0001 C CNN
+F 2 "TerminalBlock_Dinkle2:ECH381R-3p" H 8100 3000 50  0001 C CNN
 F 3 "~" H 8100 3000 50  0001 C CNN
 	1    8100 3000
 	1    0    0    -1  
@@ -148,7 +148,7 @@ U 1 1 5E17A336
 P 8100 3400
 F 0 "J3" H 8180 3442 50  0000 L CNN
 F 1 "Sensor_CH2" H 8180 3351 50  0000 L CNN
-F 2 "TerminalBlock_Dinkle2:ECH381V-3p" H 8100 3400 50  0001 C CNN
+F 2 "TerminalBlock_Dinkle2:ECH381R-3p" H 8100 3400 50  0001 C CNN
 F 3 "~" H 8100 3400 50  0001 C CNN
 	1    8100 3400
 	1    0    0    -1  
@@ -159,7 +159,7 @@ U 1 1 5E17ABE9
 P 8100 3800
 F 0 "J4" H 8180 3842 50  0000 L CNN
 F 1 "Sensor_CH3" H 8180 3751 50  0000 L CNN
-F 2 "TerminalBlock_Dinkle2:ECH381V-3p" H 8100 3800 50  0001 C CNN
+F 2 "TerminalBlock_Dinkle2:ECH381R-3p" H 8100 3800 50  0001 C CNN
 F 3 "~" H 8100 3800 50  0001 C CNN
 	1    8100 3800
 	1    0    0    -1  
@@ -373,8 +373,6 @@ Text Label 4950 3200 2    50   ~ 0
 SIG_OUT
 Wire Wire Line
 	4950 3200 5050 3200
-Text Label 3850 5200 0    50   ~ 0
-12V_input
 Text Label 3100 5550 2    50   ~ 0
 SIG_OUT
 $Comp
@@ -386,21 +384,6 @@ F 1 "IRFZ44N" H 3954 5505 50  0000 L CNN
 F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 4000 5475 50  0001 L CIN
 F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 3750 5550 50  0001 L CNN
 	1    3750 5550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3850 5750 3850 5800
-Wire Wire Line
-	3850 5950 3950 5950
-$Comp
-L Connector:Screw_Terminal_01x02 J6
-U 1 1 5E1699D6
-P 4150 5950
-F 0 "J6" H 4230 5942 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 4230 5851 50  0000 L CNN
-F 2 "TerminalBlock_Dinkle2:ECH381V-2p" H 4150 5950 50  0001 C CNN
-F 3 "~" H 4150 5950 50  0001 C CNN
-	1    4150 5950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -435,7 +418,18 @@ F 3 "" H 3400 6100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 6100 3850 6050
+	4450 5700 4450 5800
+$Comp
+L Diode:1N5822 D2
+U 1 1 5E1D0529
+P 4450 5550
+F 0 "D2" V 4404 5629 50  0000 L CNN
+F 1 "1N5822" V 4495 5629 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P3.81mm_Vertical_AnodeUp" H 4450 5375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 4450 5550 50  0001 C CNN
+	1    4450 5550
+	0    1    1    0   
+$EndComp
 $Comp
 L power:GND #PWR0107
 U 1 1 5E13D445
@@ -447,33 +441,39 @@ F 3 "" H 3850 6100 50  0001 C CNN
 	1    3850 6100
 	1    0    0    -1  
 $EndComp
+Text Label 3850 5200 0    50   ~ 0
+12V_input
 Wire Wire Line
-	3850 6050 3950 6050
+	4450 5400 4450 5300
+Wire Wire Line
+	3850 5300 3850 5350
 Wire Wire Line
 	3850 5200 3850 5300
+Connection ~ 3850 5300
 Wire Wire Line
-	4450 5800 3850 5800
-Connection ~ 3850 5800
+	4450 5300 3850 5300
+Wire Wire Line
+	3850 6100 3850 6050
+Wire Wire Line
+	3850 6050 3950 6050
+$Comp
+L Connector:Screw_Terminal_01x02 J6
+U 1 1 5E1699D6
+P 4150 5950
+F 0 "J6" H 4230 5942 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 4230 5851 50  0000 L CNN
+F 2 "TerminalBlock_Dinkle2:ECH381V-2p" H 4150 5950 50  0001 C CNN
+F 3 "~" H 4150 5950 50  0001 C CNN
+	1    4150 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5950 3950 5950
 Wire Wire Line
 	3850 5800 3850 5950
 Wire Wire Line
-	4450 5300 3850 5300
-Connection ~ 3850 5300
+	3850 5750 3850 5800
+Connection ~ 3850 5800
 Wire Wire Line
-	3850 5300 3850 5350
-$Comp
-L Diode:1N5822 D?
-U 1 1 5E1D0529
-P 4450 5550
-F 0 "D?" V 4404 5629 50  0000 L CNN
-F 1 "1N5822" V 4495 5629 50  0000 L CNN
-F 2 "Diode_THT:D_DO-201AD_P15.24mm_Horizontal" H 4450 5375 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 4450 5550 50  0001 C CNN
-	1    4450 5550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4450 5700 4450 5800
-Wire Wire Line
-	4450 5400 4450 5300
+	4450 5800 3850 5800
 $EndSCHEMATC
