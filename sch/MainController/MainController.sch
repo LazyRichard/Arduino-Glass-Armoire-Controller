@@ -446,30 +446,34 @@ F 3 "~" H 3400 6400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 5550 3850 5650
-Wire Wire Line
-	3850 6250 3850 6600
-Wire Wire Line
-	3850 5350 3400 5350
-Wire Wire Line
-	3400 5650 3850 5650
-Connection ~ 3850 5650
-Wire Wire Line
-	3850 5650 3850 5850
-Connection ~ 3850 5350
-Wire Wire Line
-	3850 5350 3850 5450
-Wire Wire Line
-	3850 5150 3850 5350
+	3850 6250 3850 6300
 $Comp
 L Diode:1N5822 D2
 U 1 1 5E1D0529
-P 3400 5500
-F 0 "D2" V 3354 5579 50  0000 L CNN
-F 1 "1N5822" V 3445 5579 50  0000 L CNN
-F 2 "Diode_THT:D_DO-201AD_P5.08mm_Vertical_KathodeUp" H 3400 5325 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 3400 5500 50  0001 C CNN
-	1    3400 5500
+P 4400 6050
+F 0 "D2" V 4354 6129 50  0000 L CNN
+F 1 "1N5822" V 4445 6129 50  0000 L CNN
+F 2 "Diode_THT:D_DO-201AD_P5.08mm_Vertical_KathodeUp" H 4400 5875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88526/1n5820.pdf" H 4400 6050 50  0001 C CNN
+	1    4400 6050
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	3850 5550 3850 5800
+Wire Wire Line
+	3850 5150 3850 5450
+Wire Wire Line
+	4400 5900 4400 5800
+Wire Wire Line
+	4400 5800 3850 5800
+Connection ~ 3850 5800
+Wire Wire Line
+	3850 5800 3850 5850
+Wire Wire Line
+	4400 6200 4400 6300
+Wire Wire Line
+	4400 6300 3850 6300
+Connection ~ 3850 6300
+Wire Wire Line
+	3850 6300 3850 6600
 $EndSCHEMATC
